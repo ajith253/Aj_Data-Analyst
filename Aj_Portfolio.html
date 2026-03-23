@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Ajith Kumar - Data Analyst | Power BI | SQL | Python">
+  <meta name="theme-color" content="#0f172a">
+  <title>Ajith Kumar - Data Analyst Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e293b;
+      --accent: #06b6d4;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+    }
+
+    .portfolio-wrapper {
+      height: 100%;
+      overflow-auto;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.6) 100%);
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      border-color: rgba(6, 182, 212, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(6, 182, 212, 0.1);
+    }
+
+    .skill-badge {
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: #06b6d4;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      display: inline-block;
+      margin: 4px;
+    }
+
+    .timeline-item {
+      padding-left: 40px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background: #06b6d4;
+      border-radius: 50%;
+      border: 3px solid #0f172a;
+    }
+
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 24px;
+      width: 2px;
+      height: 100px;
+      background: linear-gradient(180deg, #06b6d4 0%, rgba(6, 182, 212, 0.2) 100%);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      color: #f1f5f9;
+      border-bottom: 2px solid rgba(6, 182, 212, 0.3);
+      padding-bottom: 12px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    section {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 20px;
+      background: rgba(6, 182, 212, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(6, 182, 212, 0.2);
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: #06b6d4;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 50%;
+      color: #06b6d4;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background: rgba(6, 182, 212, 0.3);
+      transform: translateY(-4px);
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="portfolio-wrapper w-full h-full overflow-auto">
+   <!-- Header / Hero -->
+   <header class="relative overflow-hidden pt-20 pb-32 px-6">
+    <div class="max-w-5xl mx-auto">
+     <div class="mb-6">
+      <div class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 mb-4">
+       <span class="text-cyan-300 text-sm font-semibold">Data-Driven Professional</span>
+      </div>
+     </div>
+     <h1 id="hero-name" class="text-5xl md:text-6xl font-bold mb-4 leading-tight"><span class="gradient-text">Ajith Kumar Kowtalam</span></h1>
+     <p id="hero-headline" class="text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">Data Analyst | Business Intelligence | Healthcare Operations Expert</p>
+     <p class="text-slate-400 mb-10 max-w-2xl leading-relaxed">Transforming complex operational data into actionable insights. 2+ years crafting dashboards, automating reports, and driving data-driven decisions at Optum. Skilled in Power BI, SQL, Python, and Excel.</p>
+     <div class="flex gap-4 flex-wrap">
+      <button id="cta-btn" class="btn-primary">Download Resume</button> <a href="#contact" class="px-6 py-3 rounded-lg border border-cyan-500/30 text-slate-100 hover:bg-cyan-500/10 transition font-semibold">Get In Touch</a>
+     </div><!-- Stats -->
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+      <div class="stat-box group cursor-pointer hover:shadow-lg hover:shadow-cyan-500/20">
+       <div class="flex items-center justify-between mb-2">
+        <div>
+         <div class="stat-number">
+          2+
+         </div>
+         <div class="stat-label">
+          Years Experience
+         </div>
+        </div><i data-lucide="briefcase" style="width: 32px; height: 32px; color: #06b6d4; opacity: 0.6;"></i>
+       </div>
+      </div>
+      <div class="stat-box group cursor-pointer hover:shadow-lg hover:shadow-cyan-500/20">
+       <div class="flex items-center justify-between mb-2">
+        <div>
+         <div class="stat-number">
+          15+
+         </div>
+         <div class="stat-label">
+          Dashboards Built
+         </div>
+        </div><i data-lucide="bar-chart-3" style="width: 32px; height: 32px; color: #06b6d4; opacity: 0.6;"></i>
+       </div>
+      </div>
+      <div class="stat-box group cursor-pointer hover:shadow-lg hover:shadow-cyan-500/20">
+       <div class="flex items-center justify-between mb-2">
+        <div>
+         <div class="stat-number">
+          8
+         </div>
+         <div class="stat-label">
+          Technical Skills
+         </div>
+        </div><i data-lucide="zap" style="width: 32px; height: 32px; color: #06b6d4; opacity: 0.6;"></i>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header><!-- About -->
+   <section id="about" class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+     <h2 class="section-title">About Me</h2>
+     <div>
+      <p class="text-slate-300 leading-relaxed mb-6">I'm a results-driven Data Analyst with expertise in extracting, analyzing, and visualizing operational data. Currently at <span class="text-cyan-300 font-semibold">Optum Global Solutions</span>, I design interactive dashboards and automate reporting processes that help management make data-backed decisions.</p>
+      <p class="text-slate-300 leading-relaxed mb-6">My strength lies in bridging the gap between raw data and business value—taking complex datasets and transforming them into clear, actionable insights. I'm passionate about process automation and have leveraged Python, SQL, and Power BI to reduce manual work and improve team efficiency.</p>
+      <p class="text-slate-300 leading-relaxed">When I'm not building dashboards, I'm learning new tools, optimizing queries, and staying current with business intelligence trends.</p>
+     </div>
+     <div class="card p-8 rounded-xl">
+      <h3 class="text-lg font-bold text-cyan-300 mb-6">Quick Facts</h3>
+      <ul class="space-y-4">
+       <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> <span class="text-slate-300">Current: Data Analyst at Optum Global Solutions (Dec 2024–Present)</span></li>
+       <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> <span class="text-slate-300">MBA Graduate | BBA with 72% GPA</span></li>
+       <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> <span class="text-slate-300">Expertise: SQL, Power BI, Python, Excel automation</span></li>
+       <li class="flex items-start gap-3"><span class="text-cyan-400 mt-1">✓</span> <span class="text-slate-300">Healthcare operations &amp; business reporting background</span></li>
+      </ul>
+     </div>
+    </div>
+   </section><!-- Dashboard Analytics -->
+   <section id="analytics" class="py-20 px-6 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
+    <div class="max-w-5xl mx-auto">
+     <h2 class="section-title">Analytics Dashboard</h2>
+     <div class="grid md:grid-cols-2 gap-8 mb-8"><!-- Performance Overview -->
+      <div class="card p-8 rounded-xl">
+       <h3 class="text-lg font-bold text-slate-100 mb-6 flex items-center gap-2"><i data-lucide="trending-up" style="width: 20px; height: 20px; color: #06b6d4;"></i> Performance Metrics</h3>
+       <div class="space-y-4">
+        <div>
+         <div class="flex justify-between mb-2">
+          <span class="text-slate-300 text-sm">Report Automation</span> <span class="text-cyan-400 font-semibold">92%</span>
+         </div>
+         <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" style="width: 92%;"></div>
+         </div>
+        </div>
+        <div>
+         <div class="flex justify-between mb-2">
+          <span class="text-slate-300 text-sm">Dashboard Efficiency</span> <span class="text-cyan-400 font-semibold">88%</span>
+         </div>
+         <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" style="width: 88%;"></div>
+         </div>
+        </div>
+        <div>
+         <div class="flex justify-between mb-2">
+          <span class="text-slate-300 text-sm">Data Quality</span> <span class="text-cyan-400 font-semibold">95%</span>
+         </div>
+         <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" style="width: 95%;"></div>
+         </div>
+        </div>
+        <div>
+         <div class="flex justify-between mb-2">
+          <span class="text-slate-300 text-sm">Query Optimization</span> <span class="text-cyan-400 font-semibold">85%</span>
+         </div>
+         <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" style="width: 85%;"></div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Key Achievements -->
+      <div class="card p-8 rounded-xl">
+       <h3 class="text-lg font-bold text-slate-100 mb-6 flex items-center gap-2"><i data-lucide="award" style="width: 20px; height: 20px; color: #06b6d4;"></i> Key Achievements</h3>
+       <div class="space-y-4">
+        <div class="flex gap-4">
+         <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><span class="text-cyan-400 font-bold">1</span>
+         </div>
+         <div>
+          <p class="text-slate-200 font-semibold">Reduced Report Time</p>
+          <p class="text-slate-400 text-sm">Automated manual reporting by 40%</p>
+         </div>
+        </div>
+        <div class="flex gap-4">
+         <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><span class="text-cyan-400 font-bold">2</span>
+         </div>
+         <div>
+          <p class="text-slate-200 font-semibold">15+ Dashboards</p>
+          <p class="text-slate-400 text-sm">Built interactive Power BI dashboards</p>
+         </div>
+        </div>
+        <div class="flex gap-4">
+         <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><span class="text-cyan-400 font-bold">3</span>
+         </div>
+         <div>
+          <p class="text-slate-200 font-semibold">Data Insights</p>
+          <p class="text-slate-400 text-sm">Provided actionable insights to management</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><!-- Skills Breakdown Chart -->
+     <div class="card p-8 rounded-xl">
+      <h3 class="text-lg font-bold text-slate-100 mb-6 flex items-center gap-2"><i data-lucide="pie-chart" style="width: 20px; height: 20px; color: #06b6d4;"></i> Skills Distribution</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+       <div class="text-center p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
+        <div class="text-2xl font-bold text-cyan-400 mb-2">
+         25%
+        </div>
+        <p class="text-slate-300 text-sm">SQL &amp; Databases</p>
+       </div>
+       <div class="text-center p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
+        <div class="text-2xl font-bold text-blue-400 mb-2">
+         25%
+        </div>
+        <p class="text-slate-300 text-sm">Power BI &amp; Tableau</p>
+       </div>
+       <div class="text-center p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
+        <div class="text-2xl font-bold text-cyan-400 mb-2">
+         30%
+        </div>
+        <p class="text-slate-300 text-sm">Python &amp; Automation</p>
+       </div>
+       <div class="text-center p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
+        <div class="text-2xl font-bold text-blue-400 mb-2">
+         20%
+        </div>
+        <p class="text-slate-300 text-sm">Excel &amp; Analysis</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div><!-- Skills -->
+  <section id="skills" class="py-20 px-6 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
+   <div class="max-w-5xl mx-auto">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+     <div>
+      <h3 class="text-slate-200 font-semibold mb-4">Languages &amp; Frameworks</h3>
+      <div class="flex flex-wrap gap-2 mb-8">
+       <span class="skill-badge">Python</span> <span class="skill-badge">SQL</span> <span class="skill-badge">Pandas</span> <span class="skill-badge">NumPy</span> <span class="skill-badge">Scikit-Learn</span>
+      </div>
+      <h3 class="text-slate-200 font-semibold mb-4 mt-8">Tools &amp; Platforms</h3>
+      <div class="flex flex-wrap gap-2">
+       <span class="skill-badge">Power BI</span> <span class="skill-badge">Tableau</span> <span class="skill-badge">Excel (Advanced)</span> <span class="skill-badge">MySQL</span> <span class="skill-badge">SQLite</span> <span class="skill-badge">Jupyter Notebook</span>
+      </div>
+     </div>
+     <div>
+      <h3 class="text-slate-200 font-semibold mb-4">Core Competencies</h3>
+      <div class="space-y-3">
+       <div>
+        <div class="flex justify-between mb-2">
+         <span class="text-slate-300">Data Visualization</span> <span class="text-cyan-400 text-sm">Expert</span>
+        </div>
+        <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+         <div class="h-full w-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between mb-2">
+         <span class="text-slate-300">SQL &amp; Database Management</span> <span class="text-cyan-400 text-sm">Expert</span>
+        </div>
+        <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+         <div class="h-full w-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between mb-2">
+         <span class="text-slate-300">Python Automation</span> <span class="text-cyan-400 text-sm">Advanced</span>
+        </div>
+        <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+         <div class="h-full w-90 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between mb-2">
+         <span class="text-slate-300">Report Building &amp; Automation</span> <span class="text-cyan-400 text-sm">Advanced</span>
+        </div>
+        <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+         <div class="h-full w-90 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
+        </div>
+       </div>
+       <div>
+        <div class="flex justify-between mb-2">
+         <span class="text-slate-300">Stakeholder Management</span> <span class="text-cyan-400 text-sm">Advanced</span>
+        </div>
+        <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+         <div class="h-full w-90 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Experience -->
+  <section id="experience" class="py-20 px-6">
+   <div class="max-w-5xl mx-auto">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="space-y-8">
+     <!-- Current Role -->
+     <div class="card p-8 rounded-xl border-l-4 border-l-cyan-500">
+      <div class="flex items-start justify-between mb-4">
+       <div>
+        <h3 class="text-xl font-bold text-slate-100">Data Analyst</h3>
+        <p class="text-cyan-400 font-semibold">Optum Global Solutions, Hyderabad</p>
+       </div><span class="text-slate-400 text-sm bg-slate-800/50 px-3 py-1 rounded">Dec 2024 – Present</span>
+      </div>
+      <ul class="space-y-3 text-slate-300">
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Extract and analyze operational data using SQL queries to support business and management reporting</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Prepare and automate daily/weekly performance reports, improving visibility into key metrics (case resolution, volume, appeal success rate)</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Develop interactive Power BI dashboards to visualize team performance and highlight trends for management</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Leverage Excel (Pivot Tables, VLOOKUP, formulas) for data cleaning and validation</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Implement Python automation projects using Pandas and NumPy to streamline data transformation and reduce manual effort</span></li>
+      </ul>
+     </div><!-- Internship -->
+     <div class="card p-8 rounded-xl">
+      <div class="flex items-start justify-between mb-4">
+       <div>
+        <h3 class="text-xl font-bold text-slate-100">Data Analytics Intern</h3>
+        <p class="text-cyan-400 font-semibold">Pantech Solutions India Pvt Ltd</p>
+       </div><span class="text-slate-400 text-sm bg-slate-800/50 px-3 py-1 rounded">Apr 2025 – Jul 2025</span>
+      </div>
+      <ul class="space-y-3 text-slate-300">
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Completed hands-on training in data analytics concepts and tools</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Gained practical exposure to data cleaning, exploratory data analysis (EDA), and data visualization</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Worked on real-time datasets using Excel, Python, and Power BI</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400 mt-1">•</span> <span>Successfully earned completion certificate for internship program</span></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </section><!-- Projects -->
+  <section id="projects" class="py-20 px-6 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
+   <div class="max-w-5xl mx-auto">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+     <!-- Project 1 -->
+     <div class="card p-8 rounded-xl">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
+        <i data-lucide="bar-chart-3" style="width: 24px; height: 24px; color: white;"></i>
+       </div>
+       <h3 class="text-xl font-bold text-slate-100">Power BI Sales Dashboard</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">Coffee Shop Sales Analysis</p>
+      <p class="text-slate-300 mb-6">Designed an interactive Excel dashboard to analyze MBA student data across 3 academic years (2023–2025). Created KPIs tracking enrollment, gender ratio, performance trends, and placement statistics.</p>
+      <div class="mb-6">
+       <p class="text-slate-400 text-sm font-semibold mb-3">Key Achievements:</p>
+       <ul class="space-y-2 text-slate-300 text-sm">
+        <li>✓ Built dynamic charts and slicers for filtering by year, department, and performance</li>
+        <li>✓ Used SUMIFS, COUNTIFS, IF, INDEX–MATCH formulas for deep analysis</li>
+        <li>✓ Identified year-over-year student growth trends</li>
+        <li>✓ Presented to college management for strategic decision-making</li>
+       </ul>
+      </div>
+      <div class="flex flex-wrap gap-2">
+       <span class="skill-badge">Power BI</span> <span class="skill-badge">DAX</span> <span class="skill-badge">Excel</span>
+      </div>
+     </div><!-- Project 2 -->
+     <div class="card p-8 rounded-xl">
+      <div class="flex items-center gap-3 mb-4">
+       <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
+        <i data-lucide="pie-chart" style="width: 24px; height: 24px; color: white;"></i>
+       </div>
+       <h3 class="text-xl font-bold text-slate-100">Excel Sales Dashboard</h3>
+      </div>
+      <p class="text-slate-400 text-sm mb-4">Regional &amp; Category Performance</p>
+      <p class="text-slate-300 mb-6">Built a professional sales dashboard using advanced Excel techniques to support business reporting and identify market opportunities.</p>
+      <div class="mb-6">
+       <p class="text-slate-400 text-sm font-semibold mb-3">Key Achievements:</p>
+       <ul class="space-y-2 text-slate-300 text-sm">
+        <li>✓ Imported and cleaned sales data for accuracy and consistency</li>
+        <li>✓ Built Pivot Tables and Charts to summarize by region, category, and product</li>
+        <li>✓ Added interactive slicers for dynamic data filtering</li>
+        <li>✓ Applied conditional formatting to highlight trends and underperformance</li>
+       </ul>
+      </div>
+      <div class="flex flex-wrap gap-2">
+       <span class="skill-badge">Excel</span> <span class="skill-badge">Pivot Tables</span> <span class="skill-badge">Data Visualization</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Education -->
+  <section id="education" class="py-20 px-6">
+   <div class="max-w-5xl mx-auto">
+    <h2 class="section-title">Education &amp; Certifications</h2>
+    <div class="space-y-6">
+     <div class="card p-8 rounded-xl">
+      <div class="flex items-start justify-between mb-2">
+       <div>
+        <h3 class="text-lg font-bold text-slate-100">Master of Business Administration</h3>
+        <p class="text-cyan-400 font-semibold">Bheemi Reddy Institute of Management Science</p>
+       </div><span class="text-slate-400 text-sm">Sep 2023 – Aug 2025</span>
+      </div>
+      <p class="text-slate-300">GPA: 68% | Adoni, Andhra Pradesh</p>
+     </div>
+     <div class="card p-8 rounded-xl">
+      <div class="flex items-start justify-between mb-2">
+       <div>
+        <h3 class="text-lg font-bold text-slate-100">Bachelor of Business Administration</h3>
+        <p class="text-cyan-400 font-semibold">Bheemi Reddy Institute of Management Science</p>
+       </div><span class="text-slate-400 text-sm">Jun 2019 – Aug 2022</span>
+      </div>
+      <p class="text-slate-300">GPA: 72% | Adoni, Andhra Pradesh</p>
+     </div>
+     <div class="card p-8 rounded-xl border-l-4 border-l-cyan-500">
+      <h3 class="text-lg font-bold text-slate-100 mb-3">Certifications</h3>
+      <ul class="space-y-2 text-slate-300">
+       <li class="flex gap-3"><span class="text-cyan-400">✓</span> <span>Data Analytics Internship Completion – Pantech Solutions India Pvt Ltd</span></li>
+       <li class="flex gap-3"><span class="text-cyan-400">✓</span> <span>Hands-on Training in Data Cleaning, EDA, and Visualization</span></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
+   <div class="max-w-5xl mx-auto">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+     <div>
+      <p class="text-slate-300 mb-8 leading-relaxed">I'm always interested in connecting with hiring managers, team leads, and organizations looking to leverage data for business growth. Feel free to reach out or connect on LinkedIn.</p>
+      <div class="space-y-6">
+       <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
+         <i data-lucide="mail" style="width: 20px; height: 20px; color: white;"></i>
+        </div>
+        <div>
+         <p class="text-slate-400 text-sm mb-1">Email</p><a href="mailto:ajithkumaraj0206@gmail.com" class="text-cyan-300 hover:text-cyan-200 font-semibold transition">ajithkumaraj0206@gmail.com</a>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
+         <i data-lucide="phone" style="width: 20px; height: 20px; color: white;"></i>
+        </div>
+        <div>
+         <p class="text-slate-400 text-sm mb-1">Phone</p><a href="tel:+916301695395" class="text-cyan-300 hover:text-cyan-200 font-semibold transition">+91 6301 695 395</a>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
+         <i data-lucide="map-pin" style="width: 20px; height: 20px; color: white;"></i>
+        </div>
+        <div>
+         <p class="text-slate-400 text-sm mb-1">Location</p>
+         <p class="text-slate-300">Hyderabad, India 500038</p>
+        </div>
+       </div>
+      </div>
+      <div class="mt-8">
+       <p class="text-slate-400 text-sm font-semibold mb-4">Connect With Me</p>
+       <div class="flex gap-4">
+        <a href="https://www.linkedin.com/in/ajith-kshatriyas-89206a257/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn"> <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i> </a> <a href="https://github.com/ajith253" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub"> <i data-lucide="github" style="width: 20px; height: 20px;"></i> </a> <a href="mailto:ajithkumaraj0206@gmail.com" class="social-link" title="Email"> <i data-lucide="mail" style="width: 20px; height: 20px;"></i> </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="py-12 px-6 border-t border-slate-800/50 bg-gradient-to-b from-transparent to-slate-900/30">
+   <div class="max-w-5xl mx-auto text-center">
+    <p class="text-slate-400 mb-4">Portfolio created with passion • Data Analyst | Business Intelligence Specialist</p>
+    <p class="text-slate-500 text-sm">© 2025 Ajith Kumar Kowtalam. All rights reserved.</p>
+   </div>
+  </footer>
+  <script>
+    // Initialize Element SDK
+    const defaultConfig = {
+      name: "Ajith Kumar Kowtalam",
+      headline: "Data Analyst | Business Intelligence | Healthcare Operations Expert",
+      email: "ajithkumaraj0206@gmail.com",
+      cta_text: "Download Resume"
+    };
+
+    const config = { ...defaultConfig };
+
+    const onConfigChange = async (newConfig) => {
+      Object.assign(config, newConfig);
+      
+      if (config.name) document.getElementById('hero-name').innerHTML = `<span class="gradient-text">${config.name}</span>`;
+      if (config.headline) document.getElementById('hero-headline').textContent = config.headline;
+      if (config.cta_text) document.getElementById('cta-btn').textContent = config.cta_text;
+    };
+
+    const mapToCapabilities = (cfg) => ({
+      recolorables: [],
+      borderables: [],
+      fontEditable: undefined,
+      fontSizeable: undefined
+    });
+
+    const mapToEditPanelValues = (cfg) => new Map([
+      ["name", cfg.name || defaultConfig.name],
+      ["headline", cfg.headline || defaultConfig.headline],
+      ["email", cfg.email || defaultConfig.email],
+      ["cta_text", cfg.cta_text || defaultConfig.cta_text]
+    ]);
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Contact form handling removed
+
+    // CTA button action
+    document.getElementById('cta-btn').addEventListener('click', () => {
+      alert('Resume download would be implemented here. For now, check your LinkedIn profile!');
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e0df406b5f49aa5',t:'MTc3NDI3NDMzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
